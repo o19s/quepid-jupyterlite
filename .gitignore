@@ -1,0 +1,28 @@
+# VIM swp
+*.swp
+
+# Project files
+.idea/
+
+# Mac
+.DS_Store
+
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp/*
+!/tmp/pids
+/tmp/pids/*
+!/tmp/pids/.keep
+
+# Ignore local env file
+/.envrc
+.env
+
+# Jupyterlite
+public/notebooks
+public/notebooks-*
+.jupyterlite.doit.db
+
+# Built artifact
+jupyter-lite-build.tgz

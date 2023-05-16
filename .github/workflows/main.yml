@@ -1,0 +1,17 @@
+name: Main
+on: push
+jobs:
+  jupyter-lite-build-release:
+    runs-on: ubuntu-latest
+    name: Package and release the Juypter Lite app
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Jupyter Lite Build
+        uses: ./
+        id: jupyter-lite-build
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v1
+        with:
+          files: jupyter-lite-build.tgz

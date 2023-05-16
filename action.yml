@@ -1,0 +1,5 @@
+name: 'Jupyter Lite Docker Action'
+description: 'Build Juypter Lite App'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
