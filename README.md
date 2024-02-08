@@ -16,3 +16,10 @@ which also add the build artifact as a release asset.
 * Check [requirements.txt](./jupyterlite/requirements.txt) and [jupyter_lite_config.json](./jupyterlite/jupyter_lite_config.json) for library updates
 * Check [Dockerfile](./Dockerfile) for Pyodide updates
 
+## Development
+
+Unzip the TGZ file which will then unpack into `./notebooks`.  
+
+Run either `python -m http.server 8000 --directory ./notebooks` or `ruby -run -ehttpd ./notebooks -p 8000`
+
+Browse to http://localhost:8000 and you should see the Jupyterlite interface.

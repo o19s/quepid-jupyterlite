@@ -1,3 +1,7 @@
+
+# created by unzipping the jupyter-lite-build.tgz
+notebooks/
+
 # VIM swp
 *.swp
 
