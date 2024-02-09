@@ -16,6 +16,5 @@ ENV TARGET_DIR=${GITHUB_WORKSPACE:-/github/workspace}
 CMD jupyter lite build \
   --config /build/jupyter_lite_config.json \
   --lite-dir /build \
-  --no-sourcemaps \
   --output-dir notebooks \
   && tar -czf ${TARGET_DIR}/jupyter-lite-build.tgz notebooks
