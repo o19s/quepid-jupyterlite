@@ -6,7 +6,7 @@ Pyodide kernel and all dependencies according Jupyterlite [manual](https://jupyt
 
 ## How to
 
-* The build is [Docker](./Dockerfile) based. For a local run try `docker run -it --rm -e TARGET_DIR=/dist -v "$(pwd)":/dist $(docker build -q .)`.
+* The build is [Docker](./Dockerfile) based. For a local run try `docker run -it --rm -e TARGET_DIR=/dist -v "$(pwd)":/dist $(docker build .)`.
 This will generate a `jupyter-lite-build.tgz` with the self-contained Jupyterlite web app in your current directory.
 * On Github a [GH action](./action.yml) uses the Docker build and is embedded into the [build workflow](./.github/workflows/main.yml)
 which also add the build artifact as a release asset.
@@ -23,3 +23,8 @@ Unzip the TGZ file which will then unpack into `./notebooks`.
 Run either `python -m http.server 8000 --directory ./notebooks` or `ruby -run -ehttpd ./notebooks -p 8000`
 
 Browse to http://localhost:8000 and you should see the Jupyterlite interface.
+
+
+## Details
+
+`./jupyterlite/jupyter_lite_config.json` defines all the files to be compiled at build time instead of run time for offline use.  See https://jupyterlite.readthedocs.io/en/latest/howto/configure/advanced/offline.html

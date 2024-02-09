@@ -16,7 +16,5 @@ ENV TARGET_DIR=${GITHUB_WORKSPACE:-/github/workspace}
 CMD jupyter lite build \
   --config /build/jupyter_lite_config.json \
   --lite-dir /build \
-  --no-sourcemaps \
   --output-dir notebooks \
-  --pyodide https://github.com/pyodide/pyodide/releases/download/0.23.2/pyodide-0.23.2.tar.bz2 \
   && tar -czf ${TARGET_DIR}/jupyter-lite-build.tgz notebooks
