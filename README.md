@@ -23,3 +23,20 @@ Unzip the TGZ file which will then unpack into `./notebooks`.
 Run either `python -m http.server 8000 --directory ./notebooks` or `ruby -run -ehttpd ./notebooks -p 8000`
 
 Browse to http://localhost:8000 and you should see the Jupyterlite interface.
+
+
+## Development 2
+
+1. Run the docker task, and make the jupyter-lite-build.tgz.
+1. Unzip it into the ./notebooks
+1. `rm -rf public/notebooks` in Quepid
+1. Make sure Quepid's docker-compose.override.yml has a line similar to `- /Users/epugh/Documents/projects/quepid-jupyterlite/notebooks:/srv/app/public/notebooks`
+1.`bin/docker s` for Quepid
+1. In your Browser developer tools under network click "Disable Cache".
+1. Now load the content: http://localhost:3000/notebooks
+1. Make changes, 
+1. Do a fresh kernal restart and rerun, the `>>` button.  
+1. Update the footer date stamp.
+1. then download and save the file in `./jupyterlite/files` tree.
+1. Delete `jupyterlite.tar.gz` 
+1. run `docker run -it --rm -e TARGET_DIR=/dist -v "$(pwd)":/dist $(docker build -q .)`
