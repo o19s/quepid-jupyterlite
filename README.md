@@ -27,7 +27,7 @@ Browse to http://localhost:8000 and you should see the Jupyterlite interface.
 
 ## Development 2
 
-1. Run the docker task, and make the jupyter-lite-build.tgz.
+1. Run `docker run -it --rm -e TARGET_DIR=/dist -v "$(pwd)":/dist $(docker build -q .)` producing the jupyter-lite-build.tgz.
 1. Unzip it into the ./notebooks
 1. `rm -rf public/notebooks` in Quepid
 1. Make sure Quepid's docker-compose.override.yml has a line similar to `- /Users/epugh/Documents/projects/quepid-jupyterlite/notebooks:/srv/app/public/notebooks`
