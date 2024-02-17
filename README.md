@@ -10,7 +10,7 @@ Pyodide kernel and all dependencies according Jupyterlite [manual](https://jupyt
 This will generate a `jupyter-lite-build.tgz` with the self-contained Jupyterlite web app in your current directory.
 * On Github a [GH action](./action.yml) uses the Docker build and is embedded into the [build workflow](./.github/workflows/main.yml)
 which also add the build artifact as a release asset.
-* To create a new release push a new tag.
+* To create a new release push a new tag.   Then the job will fire.
 
 ## Updates:
 * Check [requirements.txt](./jupyterlite/requirements.txt) and [jupyter_lite_config.json](./jupyterlite/jupyter_lite_config.json) for library updates
