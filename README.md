@@ -40,3 +40,7 @@ Browse to http://localhost:8000 and you should see the Jupyterlite interface.
 1. then download and save the file in `./jupyterlite/files` tree.
 1. Delete `jupyterlite.tar.gz` 
 1. run `docker run -it --rm -e TARGET_DIR=/dist -v "$(pwd)":/dist $(docker build -q .)`
+
+If you are debugging these notebooks, they all use the Haystack Party data.
+1. Check out the dev version of Quepid.
+1. Run `bin/docker r bundle exec thor sample_data:haystack_party` to load into Quepid the data that the notebooks references.
