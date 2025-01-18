@@ -27,6 +27,8 @@ CMD jupyter lite build \
   && rm notebooks/static/pyodide/bokeh-3.1* \
   && rm notebooks/static/pyodide/Fiona-1.8* \
   && rm notebooks/static/pyodide/gdal-3.5* \
+  && rm notebooks/static/pyodide/gensim* \
+  && rm notebooks/static/pyodide/mne* \
   && rm notebooks/static/pyodide/mypy-1.1* \
   && rm notebooks/static/pyodide/opencv_python-4.7* \
   && rm notebooks/static/pyodide/RobotRaconteur-0.15* \
