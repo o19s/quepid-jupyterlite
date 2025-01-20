@@ -1,4 +1,6 @@
 # Contents below from https://github.com/jupyterlite/demo/blob/main/requirements.txt
+# Stripped out as many resources as possible to slim it down to fit in Heroku limits
+# when deployed as part of Quepid.
 
 # Core modules (mandatory)
 jupyterlite-core==0.1.0
@@ -8,18 +10,18 @@ jupyterlab~=3.5.1
 jupyterlite-pyodide-kernel==0.0.8
 
 # JavaScript kernel (optional)
-jupyterlite-javascript-kernel==0.1.0b21
+# jupyterlite-javascript-kernel==0.1.0b21
 
 # Language support (optional)
-jupyterlab-language-pack-fr-FR
-jupyterlab-language-pack-zh-CN
+# jupyterlab-language-pack-fr-FR
+# jupyterlab-language-pack-zh-CN
 
 # SQLite kernel (optional)
-jupyterlite-xeus-sqlite==0.2.1
+#jupyterlite-xeus-sqlite==0.2.1
 # P5 kernel (optional)
-jupyterlite-p5-kernel==0.1.0
+#jupyterlite-p5-kernel==0.1.0
 # Lua kernel (optional)
-jupyterlite-xeus-lua==0.3.1
+# jupyterlite-xeus-lua==0.3.1
 
 # JupyterLab: Fasta file renderer (optional)
 jupyterlab-fasta>=3,<4
@@ -41,7 +43,7 @@ ipympl>=0.8.2
 # Python: ipycanvas library for Jupyter notebooks (optional)
 ipycanvas>=0.9.1
 # Python: ipyleaflet library for Jupyter notebooks (optional)
-ipyleaflet
+# ipyleaflet
 
 # Python: plotting libraries (optional)
 plotly>=5,<6
@@ -50,4 +52,4 @@ bqplot
 
 # Contents below added from https://jupyterlite.readthedocs.io/en/latest/howto/configure/advanced/offline.html
 
-jupyterlite-core[mathjax]==0.1.0
+#jupyterlite-core[mathjax]==0.1.0
