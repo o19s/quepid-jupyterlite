@@ -31,7 +31,11 @@ CMD jupyter lite build \
   && rm notebooks/static/pyodide/mne* \
   && rm notebooks/static/pyodide/mypy-1.1* \
   && rm notebooks/static/pyodide/opencv_python-4.7* \
+  && rm notebooks/static/pyodide/*-tests.tar \
   && rm notebooks/static/pyodide/RobotRaconteur-0.15* \
-  && rm notebooks/static/pyodide/sympy-1.11* \
+  && rm notebooks/static/pyodide/scipy* \
+  && rm notebooks/static/pyodide/sympy* \
+  && rm notebooks/static/pyodide/test-1.0.* \
+  && rm notebooks/static/pyodide/tomli* \
   && rm notebooks/static/pyodide/yt-4.1* \
   && tar -czf ${TARGET_DIR}/jupyter-lite-build.tgz notebooks
