@@ -45,8 +45,6 @@ If you are debugging these notebooks, they all use the Haystack Party data.
 1. Check out the dev version of Quepid.
 1. Run `bin/docker r bundle exec thor sample_data:haystack_party` to load into Quepid the data that the notebooks references.
 
-
-
 ## Shrinking the Docker Image Size
 
 Heroku allows a Quepid "Slug" to be max 500 MB, and one of the key drivers of slug size is the inclusion of various Python libraries in Pyodide.
