@@ -25,7 +25,11 @@ Run either `python -m http.server 8000 --directory ./notebooks` or `ruby -run -e
 Browse to http://localhost:8000 and you should see the Jupyterlite interface.
 
 
-## Development 2
+## Development w Quepid
+
+Just modifying a single notebook?  It is easiest to just modify the notebook in Quepid, and then export the notebook as a .ipynb file and store it in the `./jupyterlite/files/examples` tree and check that in.
+
+However, if you want to be iterating on the fully Jupyterlite setup, then here is how you can do it in conjunction with Quepid:
 
 1. Run `docker run -it --rm -e TARGET_DIR=/dist -v "$(pwd)":/dist $(docker build -q .)` producing the jupyter-lite-build.tgz.
 1. Unzip it into the ./notebooks
